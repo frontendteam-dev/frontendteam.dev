@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256.0px"
+   height="256.0px"
+   viewBox="0 0 256.0 256.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview893"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1.0381216"
+     inkscape:cx="407.94834"
+     inkscape:cy="-113.18519"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid956" />
+  </sodipodi:namedview>
+  <defs
+     id="defs888" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:0.197581;stroke:none;stroke-width:12.3065;stroke-linecap:round"
+       id="rect11326"
+       width="255"
+       height="255"
+       x="-290"
+       y="-3.9968029e-15"
+       rx="22.173914"
+       ry="22.173914" />
+    <g
+       aria-label="FT"
+       transform="matrix(0.81781104,0,0,1.2227764,-280,-4.596084e-7)"
+       id="text13244"
+       style="font-weight:900;font-size:232.129px;line-height:478.936px;font-family:Lato;-inkscape-font-specification:'Lato Heavy';letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;stroke-width:3.62701px">
+      <path
+         d="m 138.33582,20.108075 v 30.17677 L 73.366581,49.06866 68.929251,93.112645 134.5054,73.602991 146.73316,130.84976 68.929251,123.40548 v 65.80857 L 36.683291,188.09653 12.227764,16.35622 Z"
+         id="path19217"
+         sodipodi:nodetypes="ccccccccccc" />
+      <path
+         d="m 281.55923,20.108075 v 31.105286 l -37.00396,14.21152 12.22776,122.671649 H 183.41645 L 207.87198,73.602991 158.96093,89.959211 147.15654,20.108075 Z"
+         id="path19219"
+         sodipodi:nodetypes="ccccccccc" />
+    </g>
+    <rect
+       style="fill:#000000;fill-opacity:0.197581;stroke:none;stroke-width:12.3065;stroke-linecap:round"
+       id="rect19211"
+       width="255"
+       height="255"
+       x="320"
+       y="-3.9968029e-15"
+       rx="22.173914"
+       ry="22.173914" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:232.129px;line-height:478.936px;font-family:Lato;-inkscape-font-specification:'Lato Heavy';letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;stroke:none;stroke-width:3.62701px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="406.82803"
+       y="189.21405"
+       id="text19215"
+       transform="scale(0.81781102,1.2227764)"><tspan
+         sodipodi:role="line"
+         id="tspan19213"
+         x="406.82803"
+         y="189.21405"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Heavy';stroke-width:3.62701px">FT</tspan></text>
+    <path
+       id="rect11326-8"
+       style="fill:#55c4ff;fill-opacity:1;stroke:none;stroke-width:12.3065;stroke-linecap:round"
+       d="M 22.173828,0 C 9.88948,0 0,9.88948 0,22.173828 V 232.82617 C 0,245.11052 9.88948,255 22.173828,255 H 232.82617 C 245.11052,255 255,245.11052 255,232.82617 V 22.173828 C 255,9.88948 245.11052,0 232.82617,0 Z M 15,21 109.13281,30.587891 C 115.28089,58.693202 118.68835,87.255284 121,116 H 90 L 50,96 v 40 l 71,5 c 1.58216,11.38587 0.15063,19.94013 -5,25 H 50 L 56.371094,237.36719 30,236 Z M 120.3457,30.587891 235,31 c 7.31122,48.349136 5.19579,63.271017 5,85 h -40 l 10,120 h -60 l 20,-120 h -40 z"
+       inkscape:export-filename="P:\projects\frontendteam.dev\logo-w.png"
+       inkscape:export-xdpi="96.376472"
+       inkscape:export-ydpi="96.376472"
+       sodipodi:nodetypes="sssssssssccccccccccccccccccccc" />
+  </g>
+</svg>
