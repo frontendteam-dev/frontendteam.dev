@@ -26,7 +26,12 @@ body, html {
 }
 
 .logo-text {
-  @apply text-2xl font-light italic text-slate-400 hover:text-slate-800
+  @apply text-2xl font-light italic text-slate-400 hover:text-slate-800;
+  font-family: Caveat;
+}
+
+.hand-written {
+  font-family: Caveat;
 }
 
 
