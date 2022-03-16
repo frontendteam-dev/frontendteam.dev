@@ -31,6 +31,12 @@ const manageRelativeImages = async (changedFiles) => {
     }
 }
 module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addCollection("blog", function(collection) {
+        return collection.getFilteredByGlob("src/blog/**/*.md");
+    });
+    
+    
     for(const dir of ["dist/assets/css"])
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir, { recursive: true });

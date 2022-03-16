@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.5190608"
-     inkscape:cx="120.40979"
-     inkscape:cy="49.127193"
+     inkscape:zoom="1.4681256"
+     inkscape:cx="327.9692"
+     inkscape:cy="48.020413"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -42,6 +42,18 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.01;stroke:none;stroke-width:11.9419;stroke-linecap:round"
+       id="rect5624"
+       width="256"
+       height="256"
+       x="0.14176331"
+       y="0.66774082"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="P:\projects\frontendteam.dev\favicon.png"
+       inkscape:export-xdpi="11.999999"
+       inkscape:export-ydpi="11.999999" />
     <path
        style="fill:#55c4ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.16034px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 57.306552,179.32664 C 38.301028,122.87971 18.317357,4.0734439 18.317357,4.0734439 l 50.128965,60.4321391 22.27954,-54.388926 27.849428,60.43214 38.9892,-66.4753531 22.27953,60.4321391 16.70966,-42.302498 16.70965,48.345712 33.41931,-66.4753531 c 0,0 -23.87921,116.5614661 -55.69884,163.1667761 -19.32387,28.30309 -42.38502,56.65791 -61.3962,82.3601 -34.157492,-2.05271 -48.671538,-28.42376 -72.281048,-70.27368 z"

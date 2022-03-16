@@ -7,14 +7,34 @@ permalink: /tags/{{tag}}/
 layout: layouts/base
 ---
 
-<div class="main">
+<div class="main tags">
     
 
-<h1>Tagged “{{ tag }}”</h1>
+<h1 class="text-gray-400">The Frontend Team: here we focus on <a href="/tags/{{ tag }}"><span class="text-primary">{{ tag }}</span></a></h1>
 
-<ol>
-    {% for post in collections[tag] %}
-    <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-</ol>
+    <div class="posts">
+
+        {% for post in collections[tag] %}
+        <a class="post-card" href="{{ post.url | url }}">
+            <img src="{{post.url | url}}{{post.data.image}}"/>
+            <div>
+                <h3>{{ post.data.title }}</h3>
+                
+                <ul class="tags">
+                    {%- for tag in post.data.tags -%}
+                    <li>#{{ tag }}</li>
+                    {%- endfor -%}
+                </ul>
+                <p>
+                    {{post.data.description}}
+                </p>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {% include 'partials/mailing-list.html' %}
+
 </div>
+

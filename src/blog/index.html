@@ -1,0 +1,38 @@
+---
+title: The Frontend Team blog– Everything a frontend team needs to know - development, design, devtools, UX, people, tests, and sometimes backend
+description: The frontend team is a group of people discussing how to optimize the job of the frontend developer
+permalink: /blog/
+layout: layouts/base
+---
+
+<div class="main tags">
+    
+
+<h1 class="text-gray-400">The Frontend Team blog </h1>
+
+    <div class="posts">
+
+        {% for post in collections.blog %}
+        <a class="post-card" href="{{ post.url | url }}">
+            <img src="{{post.url | url}}{{post.data.image}}"/>
+            <div>
+                <h3>{{ post.data.title }}</h3>
+                
+                <ul class="tags">
+                    {%- for tag in post.data.tags -%}
+                    <li>#{{ tag }}</li>
+                    {%- endfor -%}
+                </ul>
+                <p>
+                    {{post.data.description}}
+                </p>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {% include 'partials/mailing-list.html' %}
+
+</div>
+
