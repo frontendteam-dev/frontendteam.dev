@@ -132,7 +132,7 @@ In the next posts we will discuss how to implement each of them.
 
 ### Theme
 - Colors
-- Text size and typography
+- Text sizes and typography
 - Spaces
 
 ### Atomic components
