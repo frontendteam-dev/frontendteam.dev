@@ -4,6 +4,10 @@ const fs = require("fs")
 const path = require("path")
 const fastglob = require(`fast-glob`); // 11ty uses `fast-glob` internally
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
+const { promisify } = require("util");
+const execFile = promisify(require("child_process").execFile);
 
 
 async function blogEntries(){
@@ -31,6 +35,17 @@ const manageRelativeImages = async (changedFiles) => {
     }
 }
 module.exports = function(eleventyConfig) {
+
+    eleventyConfig.addPlugin(pluginRss);
+
+    eleventyConfig.addFilter("sitemapDateTimeString", (dateObj) => {
+        try {
+            return dateObj.toISOString()
+        } catch (e){
+            return ""
+        }
+    });
+
 
     eleventyConfig.addCollection("blog", function(collection) {
         return collection.getFilteredByGlob("src/blog/**/*.md");
@@ -78,6 +93,46 @@ module.exports = function(eleventyConfig) {
                 });
             });
     });
+
+
+
+
+    async function lastModifiedDate(filename) {
+        try {
+            const { stdout } = await execFile("git", [
+                "log",
+                "-1",
+                "--format=%cd",
+                filename,
+            ]);
+            return new Date(stdout);
+        } catch (e) {
+            console.error(e.message);
+            // Fallback to stat if git isn't working.
+            const stats = await stat(filename);
+            return stats.mtime; // Date
+        }
+    }
+    // Cache the lastModifiedDate call because shelling out to git is expensive.
+    // This means the lastModifiedDate will never change per single eleventy invocation.
+    const lastModifiedDateCache = new Map();
+    eleventyConfig.addNunjucksAsyncFilter(
+        "lastModifiedDate",
+        function (filename, callback) {
+            const call = (result) => {
+                result.then((date) => callback(null, date));
+                result.catch((error) => callback(error));
+            };
+            const cached = lastModifiedDateCache.get(filename);
+            if (cached) {
+                return call(cached);
+            }
+            const promise = lastModifiedDate(filename);
+            lastModifiedDateCache.set(filename, promise);
+            call(promise);
+        }
+    );
+    
     
     return {
         dir: {
