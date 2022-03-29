@@ -10,8 +10,8 @@ const { promisify } = require("util");
 const execFile = promisify(require("child_process").execFile);
 
 
-async function blogEntries(){
-    const entries = await fastglob([`src/blog/**/index.md`], { cwd: "." });
+async function directoryEntries(dirName){
+    const entries = await fastglob([`src/${dirName}/**/index.md`], { cwd: "." });
     return entries
 }
 
@@ -50,6 +50,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("blog", function(collection) {
         return collection.getFilteredByGlob("src/blog/**/*.md");
     });
+
+    eleventyConfig.addCollection("books", function(collection) {
+        return collection.getFilteredByGlob("src/books/**/*.md");
+    });
     
     
     for(const dir of ["dist/assets/css"])
@@ -64,8 +68,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/");
     eleventyConfig.on('beforeWatch', manageRelativeImages)
     eleventyConfig.on('afterBuild', async ()=>{
-        const foundBlogEntries = await blogEntries()
+        const foundBlogEntries = await directoryEntries("blog")
         await manageRelativeImages(foundBlogEntries)
+        const foundBookEntries = await directoryEntries("books")
+        await manageRelativeImages(foundBookEntries)
     })
     eleventyConfig.on("beforeBuild", () => {
         
