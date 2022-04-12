@@ -54,6 +54,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("books", function(collection) {
         return collection.getFilteredByGlob("src/books/**/*.md");
     });
+
+    eleventyConfig.addCollection("pills", function(collection) {
+        return collection.getFilteredByGlob("src/pills/**/*.md");
+    });
     
     
     for(const dir of ["dist/assets/css"])
@@ -72,6 +76,8 @@ module.exports = function(eleventyConfig) {
         await manageRelativeImages(foundBlogEntries)
         const foundBookEntries = await directoryEntries("books")
         await manageRelativeImages(foundBookEntries)
+        const foundPillsEntries = await directoryEntries("pills")
+        await manageRelativeImages(foundPillsEntries)
     })
     eleventyConfig.on("beforeBuild", () => {
         

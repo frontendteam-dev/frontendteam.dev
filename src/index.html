@@ -12,55 +12,60 @@ layout: layouts/base
             <a href="https://github.com/butopen">open source software</a>, we write about our team, 
             our process, and our findings: <br>
                 <a href="/tags/development">development</a>, <a href="/tags/design">design</a>, 
-                <a href="https://www.redevtools.com" target="_blank">devtools</a>, UX, 
+                <a href="https://www.redevtools.com" target="_blank">devtools</a>, <a href="/tags/UX/">UX</a>, 
                 <a href="/tags/DX/">DX</a>, people, tests, and sometimes backend</p></h1>
 
     
-    <div class="my-24 text-gray-400">
-        <p>
-            <span class="text-xl hand-written">Join our community</span>
-            <br>
-            <span class="text-xs">Join us and get:</span>
-        </p>
-        <ul>
-            <li><a href="https://www.amazon.com/dp/B09WPHYNCJ" target="_blank">
-                <img src="/books/design-UX-essential-guide-for-frontend-developers-figma-tutorials/essential-guide-design-ux-for-frontend-developers-figma.png" 
-                     style="display: inline;height:30px" alt="The essential guide to design and ux for frontend  developers" />
-                <b>the essential guide to design and ux for
-                developers</b></a> for <i class="line-through text-sm">$9,99</i> <b class="text-black"> free, instantly</b></li>
-            <li>a 30-min slot to discuss about frontend problems, architectures, ideas</li>
-        </ul>
-        <p class="text-xs">Find out how the frontend team enjoys developing software.</p>
-        
+    <div class="my-8 text-gray-400">
 
-        <form action="https://dev.us14.list-manage.com/subscribe/post?u=ec8493c12fd6fd942d5b275dd&amp;id=3b9d27ea49"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate max-w-md"
-              target="_blank" novalidate>
-            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-            </label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-            <label for="mce-FNAME">Name </label>
-            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="hidden"
-                                                                                      name="b_4ce7f05f69da58e8a15e2dcd9_626f72c28b"
-                                                                                      tabindex="-1" value=""></div>
-            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="bo-button block mt-2">SUBSCRIBE</button>
-        </form>
-        <div class="text-gray-400 text-xs">
-            <p>
-                Subscribe only if you want to receive content related to
-                the frontend team journey into frontend <b><a href="/tags/development/">development</a></b>, <b><a href="/tags/design/">design</a></b>, <b><a href="https://www.redevtools.com" target="_blank">devtools</a></b>, <b>UX</b>,
-                <b><a href="/tags/DX/">DX</a></b>,
-                <b>team</b>, <b>tests</b>, and <b>sometimes backend (for frontend goals only, promise 😉)</b>.
-                <br>
-                You can unsubscribe in any moment using the link at the end of each email.
-            </p>
-
-        </div>
+        <style>hr {opacity: 0}</style>
+        {% include 'partials/mailing-list.html' %}
         
     </div>
+    
+    
+    <h2>Latest posts</h2>
 
-    <p class="text-right text-xl hand-written">❤️ The Frontend Team</p>
+    <div class="posts">
+
+        {% for post in collections.pills %}
+        <a class="post-card" href="{{ post.url | url }}">
+            <img src="{{post.url | url}}{{post.data.image}}"/>
+            <div>
+                <h3>{{ post.data.title }}</h3>
+
+                <ul class="tags">
+                    {%- for tag in post.data.tags -%}
+                    <li>#{{ tag }}</li>
+                    {%- endfor -%}
+                </ul>
+                <p>
+                    {{post.data.description}}
+                </p>
+
+            </div>
+        </a>
+        {% endfor %}
+
+        {% for post in collections.blog %}
+        <a class="post-card" href="{{ post.url | url }}">
+            <img src="{{post.url | url}}{{post.data.image}}"/>
+            <div>
+                <h3>{{ post.data.title }}</h3>
+
+                <ul class="tags">
+                    {%- for tag in post.data.tags -%}
+                    <li>#{{ tag }}</li>
+                    {%- endfor -%}
+                </ul>
+                <p>
+                    {{post.data.description}}
+                </p>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 
     <script>
 

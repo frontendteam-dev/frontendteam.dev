@@ -1,18 +1,18 @@
 ---
 title: The Frontend Team Quick Books – We write books of 50-100 pages at most, with all the necessary information to get started and be ready to master a particular technology, process, or methodology
 description: The frontend team is a group of people that loves frontend. And to spread this happiness we write books about many topics. Every book is condensed to the essential to help any dev get the most out of it 
-permalink: /books/
+permalink: /pills/
 layout: layouts/base
 ---
 
 <div class="main tags">
     
 
-<h1 class="text-gray-400">The Frontend Team - The Definitive Books Series </h1>
+<h1 class="text-gray-400">The Frontend Team - The Pills Series - Small vertical posts about frontend </h1>
 
     <div class="posts">
 
-        {% for post in collections.books %}
+        {% for post in collections.pills %}
         <a class="post-card" href="{{ post.url | url }}">
             <img src="{{post.url | url}}{{post.data.image}}"/>
             <div>
