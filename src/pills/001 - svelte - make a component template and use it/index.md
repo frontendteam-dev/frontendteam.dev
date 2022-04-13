@@ -6,7 +6,7 @@ image: svelte-pills-scaffold-template.jpg
 imageAlt: Create components in seconds using this template and a cli
 permalink: /pills/svelte-component-template-scaffold-cli/
 tags: ['svelte','component','cli', 'development', 'DX', 'frontend pills']
-author: Salvatore Romeo
+author: Salvatore Romeo, PhD
 authorLink: https://linkedin.com/in/salvatoreromeo
 ---
 
@@ -30,7 +30,7 @@ and get the component as you would have written it, ready into the `src/componen
 It's easy:
 
 1) Create the template. Here you can find the one we use into our _svelte_ projects:
-```
+```html
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import { writable } from 'svelte/store';

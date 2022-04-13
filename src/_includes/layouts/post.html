@@ -19,11 +19,21 @@ layout: layouts/base
     
     <img src="{{image}}" alt="{{imageAlt}}" class="post-image" />
     {{ content }}
+
+
+    That's all for now, but join our newsletter for more stories (Join us at the bottom of the page).
+    <p class="text-right text-xl hand-written">Thank you<br>❤️ The Frontend Team</p>
     
-    <h2>Like this frontend team story? Share with the community</h2>
-    <a class="share-twitter" href="https://twitter.com/share/?via=frontendteam&text={{title}}&url={{site.host}}{{permalink}}&hashtags={{tags}}" target="_blank">Share on twitter</a>
-    <a class="share-linkedin ml-4" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.host}}{{permalink}}&hashtags={{tags}}" target="_blank">Share on linkedin</a>
+    <h2>Did you like this story from the frontend team?
+        <br>
+        <small>Share with the community</small>
+    </h2>
+    
+    <a class="share-twitter" href="https://twitter.com/share/?via=frontendteam&text={{title}}&url={{site.host}}{{permalink}}&hashtags={{tags}}" target="_blank">👉 Share on twitter</a>
+    <a class="share-linkedin ml-4" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.host}}{{permalink}}&hashtags={{tags}}" target="_blank">👉 Share on linkedin</a>
 
     
     {% include 'partials/mailing-list.html' %}
 </div>
+
+
