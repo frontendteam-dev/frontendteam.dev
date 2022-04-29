@@ -171,13 +171,25 @@ pre[class*=language-]:after, pre[class*=language-]:before {
   box-shadow: 0 4px 8px #979797 !important;
 }
 
+h1 {
+  color: #005783 !important;
+}
+
+h2 {
+  color: #0073ab !important;
+}
+
+h3 {
+  color: #0088cb !important;
+}
+
 
 em {
   @apply text-blue-900
 }
 
 strong {
-  @apply text-green-900
+  @apply text-orange-600
 }
 
 .note {

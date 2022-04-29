@@ -11,7 +11,9 @@ authorLink: https://linkedin.com/in/salvatoreromeo
 ---
 
 In this [frontend pill](https://thefrontendteam.com/pills/) we are going to create a 
-stepper atomic component in pure css.
+stepper atomic component in pure css. 
+
+We needed it in our design system to complete the onboard wizard at ssonext.com (WIP).
 
 This would be the result:
 
