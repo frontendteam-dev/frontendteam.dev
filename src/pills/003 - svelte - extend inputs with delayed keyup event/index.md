@@ -12,7 +12,7 @@ authorLink: https://linkedin.com/in/salvatoreromeo
 
 ## Why we should implement a custom event in Svelte?
 
-### The problem
+#### The problem
 I already know that when you need to handle some validation on text inputs, then you do it on keyup events.
 
 And that is ok. Or not? 
@@ -29,13 +29,13 @@ And in this post we will see how to add a custom event to the input, to handle t
 
 But let's proceed step by step.
 
-### Input Validation
+#### Input Validation
 
 When working with inputs, **validation** is mandatory: it is necessary to perform some checks when the user stops typing, and not every time a key is pressed.
 
 We want to have a tool to attach this behaviour easily to our inputs everytime.
 
-### Autocomplete components
+#### Autocomplete components
 
 The same behavior is also useful in **autocomplete components**, where an action must be performed to decide which elements to show: if I execute it at each keypress I could soon block the system, especially if the action involves an **asynchronous call** to an endpoint. 
 
