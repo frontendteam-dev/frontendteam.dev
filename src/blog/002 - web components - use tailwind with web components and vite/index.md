@@ -4,7 +4,7 @@ description: Web components are still a raw technology, but if you mix them with
 layout: layouts/post
 image: index.jpg
 imageAlt: Create a web component with tailwind inside
-permalink: /pills/create-web-component-using-tailwind-starter-kit/
+permalink: /blog/create-web-component-using-tailwind-starter-kit/
 tags: ['web component','tailwind','vite', 'developer experience']
 author: Salvatore Romeo, PhD
 authorLink: https://linkedin.com/in/salvatoreromeo
