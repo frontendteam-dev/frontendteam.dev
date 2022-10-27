@@ -19,6 +19,7 @@ let mediumToken = {Authorization: "Bearer "+process.env.MEDIUM_TOKEN};
     }
 
     const meResponse = await get("https://api.medium.com/v1/me", mediumToken)
+    console.log("meResponse: ",meResponse)
     const userId = meResponse.data.id
     console.log("userId: ",userId)
     

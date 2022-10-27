@@ -3,7 +3,10 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const fs = require("fs")
 const yaml = require('js-yaml');
 
-const path = "./src/pills/003 - svelte - extend inputs with delayed keyup event/index.md"
+const kind = `blog`
+//const kind = `pills`
+const entry = `002 - web components - use tailwind with web components and vite`
+const path = `./src/${kind}/${entry}/index.md`
 
 const get = async (url, token) => await (await fetch(url, {
     method: "GET",

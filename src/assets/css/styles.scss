@@ -75,6 +75,10 @@ body {
   flex: 1;
 }
 
+body.post {
+  @apply bg-gray-100
+}
+
 
 .sc-bl-copy {
   width: 20px;
@@ -119,7 +123,7 @@ a.post-card {
 }
 
 .post-content {
-  @apply max-w-screen-lg p-8 mx-auto bg-white shadow-lg rounded-md;
+  @apply max-w-screen-lg p-8 mx-auto bg-white shadow-lg rounded-md ;
   img:first-child {
     @apply shadow-xl
   }
