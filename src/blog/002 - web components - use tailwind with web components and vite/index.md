@@ -1,5 +1,5 @@
 ---
-title: How to develop a web component using tailwind&#58; a modern starter kit (vite, tailwind, lit element, SCSS)
+title: How to develop a web component using tailwind - a modern starter kit (vite, tailwind, lit element, SCSS)
 description: Web components are still a raw technology, but if you mix them with other good technologies like SCSS and tailwind, the dev experience is better. Let's see how to integrate Tailwind with web components the easy way.
 layout: layouts/post
 image: index.jpg
@@ -58,7 +58,7 @@ import {html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {TailwindElement} from '../shared/tailwind.element';
 
-import style from './test.component.scss'; // #1
+import style from './test.component.scss?inline'; // #1
 
 @customElement('test-component')
 export class TestComponent extends TailwindElement(style) { // #2
@@ -84,6 +84,7 @@ The only difference to a standard _LitElement_ is that:
 1) You must import your styles from a separate file. And this is good for two reasons:
     - it separates the CSS from the logic
     - you can decide to use CSS or SCSS
+    - note the `?inline` at the end of the file path: if you don't add it, then vite will add the style to the head of the html. If you add it, the style is scoped into the component only
 2) the component class extends a _TailwindElement_ rather than a LitElement
 
 The _TailwindElement_ extends the _LitElmement_ (see below) and adds the logic to integrate tailwind and your styles.
